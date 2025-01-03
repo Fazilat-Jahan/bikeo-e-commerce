@@ -41,7 +41,7 @@ const bikes: Bike[] = [
   },
 ]
 
-export default function BikePage({ params }: { params: { id: string } }) {
+export default function BikePage({ params }: { params: { id:any } }) {
   const [bike, setBike] = useState<Bike | null>(null)
   const { addToCart } = useCart()
 
