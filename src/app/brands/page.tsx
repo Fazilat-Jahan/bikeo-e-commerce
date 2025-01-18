@@ -5,9 +5,22 @@ const brands = [
   {
     id: 'honda',
     name: 'Honda',
-    image: '/hero-picture.jpg?height=300&width=400',
+    image: '/herobike.png?height=300&width=400',
     logo: '/hondaLogo.png?height=100&width=100'
   },
+  // {
+  //   id: 'yamaha',
+  //   name: 'yamaha',
+  //   image: '/herobike.png?height=300&width=400',
+  //   logo: '/hondaLogo.png?height=100&width=100'
+  // },
+  // {
+  //   id: 'kawasaki',
+  //   name: 'kawasaki',
+  //   image: '/herobike.png?height=300&width=400',
+  //   logo: '/hondaLogo.png?height=100&width=100'
+  // },
+  
 //   {
 //     id: 'yamaha',
 //     name: 'Yamaha',
@@ -27,7 +40,7 @@ export default function BrandsPage() {
         <h1 className="mb-8 md:mb-12 text-center text-3xl md:text-5xl font-bold text-red-600 [text-shadow:_0_0_10px_rgb(220_38_38_/_50%)]">
           CHOOSE YOUR BIKE BRAND
         </h1>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 items-center">
           {brands.map((brand) => (
             <div
               key={brand.id}
@@ -49,6 +62,7 @@ export default function BrandsPage() {
                   height={100}
                   className="h-16 w-16 md:h-20 md:w-20"
                 /> */}
+                <h1 className="flex flex-col items-center justify-center gap-4 font-bold text-lg">{brand.name}</h1>
                 <Link
                   href={`/brands/${brand.id}`}
                   className="rounded bg-red-600 px-4 md:px-6 py-2 font-semibold text-white hover:bg-red-700 transition-colors"
